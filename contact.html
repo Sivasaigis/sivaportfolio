@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Sivasai Krishna</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js" defer></script>
 </head>
 <body>
-  <header>
+  <header class="reveal">
     <nav>
       <h1 class="logo">Sivasai Krishna</h1>
       <ul class="nav-links">
@@ -25,7 +25,7 @@
     <p>Phone: +952-977-8751</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/sivasaikrishna-pasupuleti-1692a3229/" target="_blank">Visit Profile</a></p>
 
-    <form action="#" method="POST">
+    <form action="#" method="POST" class="reveal">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
@@ -33,12 +33,21 @@
     </form>
   </section>
 
-  <footer>
+  <footer class="reveal">
     <p>© 2025 Sivasai Krishna</p>
   </footer>
 
   <script>
-    ScrollReveal().reveal('.reveal', { delay: 300, distance: '50px', duration: 800, easing: 'ease-in-out' });
+    document.addEventListener("DOMContentLoaded", function () {
+      ScrollReveal().reveal('.reveal', {
+        delay: 200,
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        easing: 'ease-in-out',
+        reset: false
+      });
+    });
   </script>
 </body>
 </html>
