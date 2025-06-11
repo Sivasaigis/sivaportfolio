@@ -1,120 +1,53 @@
-/* style.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Sivasai Krishna</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js" defer></script>
+</head>
+<body>
+  <header class="reveal">
+    <nav>
+      <h1 class="logo">Sivasai Krishna</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-  scroll-behavior: smooth;
-}
+  <section class="contact reveal">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:sivasaikrishna803@gmail.com">sivasaikrishna803@gmail.com</a></p>
+    <p>Phone: +952-977-8751</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sivasaikrishna-pasupuleti-1692a3229/" target="_blank">Visit Profile</a></p>
 
-header {
-  background-color: #004d66;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    <form action="#" method="POST" class="reveal">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+  <footer class="reveal">
+    <p>© 2025 Sivasai Krishna</p>
+  </footer>
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #ffd700;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-section {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #004d66;
-  margin-bottom: 1rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-.project, .about, .skills, .education, .contact {
-  margin-bottom: 3rem;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-input, textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  width: 100%;
-}
-
-button {
-  padding: 0.75rem;
-  background-color: #004d66;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #006c88;
-}
-
-footer {
-  background-color: #004d66;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      ScrollReveal().reveal('.reveal', {
+        delay: 200,
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        easing: 'ease-in-out',
+        reset: false
+      });
+    });
+  </script>
+</body>
+</html>
