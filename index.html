@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sivasai Krishna | GIS Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js" defer></script>
 </head>
 <body>
-  <header>
+  <header class="reveal">
     <nav>
       <h1 class="logo">Sivasai Krishna</h1>
       <ul class="nav-links">
@@ -19,9 +19,9 @@
     </nav>
   </header>
 
-  <section class="hero" id="hero">
-    <h2 class="reveal">GIS Developer</h2>
-    <p class="reveal">10+ years of experience specializing in GIS enterprise architecture and application development.</p>
+  <section class="hero reveal" id="hero">
+    <h2>GIS Developer</h2>
+    <p>10+ years of experience specializing in GIS enterprise architecture and application development.</p>
   </section>
 
   <section class="about reveal">
@@ -47,12 +47,22 @@
     <p>Bachelor of Technology in Computer Science, Lakireddy Balireddy College of Engineering, India</p>
   </section>
 
-  <footer>
+  <footer class="reveal">
     <p>© 2025 Sivasai Krishna</p>
   </footer>
 
   <script>
-    ScrollReveal().reveal('.reveal', { delay: 300, distance: '50px', duration: 800, easing: 'ease-in-out' });
+    document.addEventListener(\"DOMContentLoaded\", function () {
+      ScrollReveal().reveal('.reveal', {
+        delay: 200,
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        easing: 'ease-in-out',
+        reset: false
+      });
+    });
   </script>
 </body>
 </html>
+
