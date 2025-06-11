@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Sivasai Krishna</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js" defer></script>
 </head>
 <body>
-  <header>
+  <header class="reveal">
     <nav>
       <h1 class="logo">Sivasai Krishna</h1>
       <ul class="nav-links">
@@ -22,7 +22,7 @@
   <section class="projects reveal">
     <h2>Professional Projects</h2>
 
-    <div class="project">
+    <div class="project reveal">
       <h3>GIS Developer – Vetro, ME (Aug 2024 – Present)</h3>
       <ul>
         <li>Built automated Python scripts for data processing and reporting.</li>
@@ -31,7 +31,7 @@
       </ul>
     </div>
 
-    <div class="project">
+    <div class="project reveal">
       <h3>GIS Developer – GdB Geospatial, NY (Mar 2023 – Aug 2024)</h3>
       <ul>
         <li>Created custom web GIS apps with ArcGIS API for JavaScript.</li>
@@ -40,7 +40,7 @@
       </ul>
     </div>
 
-    <div class="project">
+    <div class="project reveal">
       <h3>GIS Analyst – Geospoc, India (Jul 2017 – Sep 2019)</h3>
       <ul>
         <li>Designed geodatabases and schemas for data modeling.</li>
@@ -49,7 +49,7 @@
       </ul>
     </div>
 
-    <div class="project">
+    <div class="project reveal">
       <h3>GIS Technician – Transerve Technologies (Mar 2014 – Jul 2017)</h3>
       <ul>
         <li>Handled GPS data collection and field coordination.</li>
@@ -59,12 +59,22 @@
     </div>
   </section>
 
-  <footer>
+  <footer class="reveal">
     <p>© 2025 Sivasai Krishna</p>
   </footer>
 
   <script>
-    ScrollReveal().reveal('.reveal', { delay: 300, distance: '50px', duration: 800, easing: 'ease-in-out' });
+    document.addEventListener("DOMContentLoaded", function () {
+      ScrollReveal().reveal('.reveal', {
+        delay: 200,
+        distance: '50px',
+        duration: 1000,
+        origin: 'bottom',
+        easing: 'ease-in-out',
+        reset: false
+      });
+    });
   </script>
 </body>
 </html>
+
